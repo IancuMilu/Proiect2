@@ -1,0 +1,92 @@
+@startuml
+interface Food{
++ void numeFood(String nume);
++ void pretFood(double pret);
++ void inventarFood(int inventar);
+}
+
+Food <|... Mancaruri
+Food<|... Bauturi
+
+class Mancaruri{
++  String numeMancare;
++  double pretMancare;
+- int inventarMancare;
+
++ void numeFood(String numeMancare);
++ void pretFood(double pret);
++ void inventarFood(int inventar);
++ int getInventarMancare();
++ void setInventarMancare();
++ boolean lipsaStoc();
+}
+
+class Bauturi{
++ String numeBautura;
++ double pretBautura;
+- int inventarBautura;
+
++ void numeFood(String numeBautura);
++ void pretFood(double pretBautura);
++ void inventarFood(int inventarBautura);
++ int getInventarBautura();
++ void setInventarBautura();
++ boolean lipsaStoc();
+}
+
+interface Reduceri{
++ static void reducere(double val);
+}
+
+class Reducere{
++ static void reducere(double val)
+}
+
+Reduceri<|... Reducere
+
+class Restaurant{
++ String numeRestaurant;
+- static double totalPlata;
++ static String cosCumparaturi;
+
++ static void setTotalPlata(double pret);
++ static double getTotalPlata();
++ static void cosCumparaturi;
++ static void stergereCosCumparaturi;
+}
+
+class FirstWindow extends JFRAME implements actionListener{
+firstButton : JButton;
+secondButton : JButton;
+thirdButton : JButton;
+forthButton : JButton;
+firstPanel : JPanel;
+}
+
+class SecondWindow extends JFRAME implements actionListener{
+firstButton : JButton;
+secondButton : JButton;
+thirdButton : JButton;
+forthButton : JButton;
+fifthButton : JButton;
+sixthButton : JButton;
+firstPanel : JPanel;
+}
+
+class ThirdWindow extends JFRAME implements actionListener{
+firstButton : JButton;
+secondButton : JButton;
+thirdButton : JButton;
+forthButton : JButton;
+fifthButton : JButton;
+sixthButton : JButton;
+firstPanel : JPanel;
+}
+
+class ForthWindow extends JFRAME{
+text : JTextArea;
++ void append
+}
+
+
+@enduml
